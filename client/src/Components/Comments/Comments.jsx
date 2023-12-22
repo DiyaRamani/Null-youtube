@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { postComment } from "../../actions/comments";
+import { getAllComment, postComment } from "../../actions/comments";
 import "./comments.css";
 import DisplayComments from "./DisplayComments";
 import axios from "axios";
@@ -27,6 +27,7 @@ function Comments({ videoId }) {
 
   useEffect(()=>{
     getLocation()
+    dispatch(getAllComment())
   },[])
 
   const getLocation = async() =>{
