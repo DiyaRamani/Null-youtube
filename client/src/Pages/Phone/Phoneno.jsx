@@ -46,7 +46,7 @@ function PhoneNo({ setPhoneNo }) {
         <input
           type="submit"
           value={"Submit"}
-          onClick={handleSubmit}
+          onClick={()=>{handleSubmit();setPhoneNo(false)}}
           className="ibtn"
         />
       </div>
